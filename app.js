@@ -18,6 +18,7 @@ var completedTasksHolder=document.querySelector(".completed");//completed-tasks
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
+    listItem.classList.add("list-item");
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -37,14 +38,17 @@ var createNewTaskElement=function(taskString){
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.classList.add("checkbox");
     editInput.type="text";
+    editInput.classList.add("text-type");
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.classList.add("edit", "btn");
 
     deleteButton.innerText="Delete";
-    deleteButton.className="delete";
+    deleteButton.classList.add("delete", "btn");
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.classList.add("delete-img");
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -155,7 +159,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
+    var checkBox=taskListItem.querySelector(".checkbox");
     var editButton=taskListItem.querySelector("button.edit");
     var deleteButton=taskListItem.querySelector("button.delete");
 
