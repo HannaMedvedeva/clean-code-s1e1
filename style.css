@@ -113,7 +113,7 @@
   width: 226px;
 }
 .text-type {
-  width: 224px
+  width: 224px;
 }
 .delete:hover {
   color: #cf2323;
@@ -135,12 +135,12 @@
 
 /* Edit Task */
 .list-item .text-type {
-  display: none
+  display: none;
 }
 
 .list-item.edit-mode .text-type {
   display: inline-block;
-  width: 205px
+  width: 205px;
 }
 
 .list-item.edit-mode .task {
